@@ -14,12 +14,14 @@
   unicode-range: U+0020-0451;
 }
 body {
-  font-family: 'Ubuntu', 'Helvetica', sans-serif;
+  //font-family: 'Ubuntu', 'Helvetica', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: $grey;
-  padding-top: 77px;
+  padding-top: 60px;
   @media ($bpxs) {
     padding-top: 0;
   }
+  background: #efeee7;
 }
 h2 {
   font-size: 42px;

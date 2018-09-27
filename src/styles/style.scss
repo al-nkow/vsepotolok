@@ -201,3 +201,127 @@
   background: -moz-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
   background: linear-gradient(84deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
 }
+
+// =======================================
+// =======================================
+// =======================================
+// =======================================
+.main-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.main-block {
+  height: 672px;
+  background: url('../img/main.jpg');
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.main-nav {
+  height: 70px;
+  background: #354C55;
+  position: relative;
+  color: #dedede;
+  margin-bottom: 3px;
+}
+.info-wrap {
+  width: 53%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  transform: skewX(-20deg);
+}
+.info {
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.site-name {
+  font-size: 66px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  span {
+    font-size: 40px;
+    font-weight: 300;
+  }
+}
+.site-slogan {
+  font-size: 24px;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: #94d5d8;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: -8px;
+}
+.site-desc {
+  margin-left: -40px;
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 44px;
+  margin-bottom: 36px;
+}
+.warranty {
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 56px;
+    height: 56px;
+    fill: #dc7f6c;
+    margin-right: 10px;
+  }
+  color: #ffffff;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  margin-left: -80px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.site-logo-wrap {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  svg {
+    display: inline-block;
+    fill: #dedede;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -1px;
+  }
+  .name {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.contacts {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+.contacts-item {
+  display: inline-block;
+  margin-left: 15px;
+  color: #dedede;
+  border-left: 1px solid #dedede;
+  padding-left: 15px;
+  svg {
+    vertical-align: middle;
+    display: inline-block;
+    fill: #dedede;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-top: -2px;
+  }
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #dedede;
+  }
+}
