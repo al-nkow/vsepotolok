@@ -1,0 +1,46 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='keywords', content='натяжные потолки ремонт строительство отделка')
+    meta(name='description', content='Натяжные потолки')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0')
+    title Всепотолок.рф
+    link(rel="shortcut icon" type="image/png" href=require("./favicon.png"))
+    //link(
+    //  rel="stylesheet"
+    //  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+  body
+    .preloader
+      .loader-wrap
+        .loader Loading...
+    .full-wrap.hidden
+      .mob-menu-button.jsMobMenuItem
+        svg(viewbox='0 0 24 24')
+          g
+            path(d='M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z')
+            path(d='M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z')
+            path(d='M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z')
+      .mob-menu#mobMenu
+        .jsMobMenuItem.mob-menu-item.totop В начало страницы
+        .jsMobMenuItem.mob-menu-item.scrollToTeachers Преподаватели проекта
+        .jsMobMenuItem.mob-menu-item.scrollToFaq Частые вопросы
+        .jsMobMenuItem.mob-menu-item.scrollToFooter Контакты
+        .jsMobMenuItem.mob-menu-item(data-toggle="modal" data-target="#letterModal") Тебе письмо!
+        .mob-menu-but-wrap
+          .jsMobMenuItem.mob-menu-item-button.scrollToPay Я готова меняться!
+      // =============== NAVIGATION ===============
+      //.navigation-mob
+      .navigation
+        .container
+          .logo.totop
+            img.logo-img(src=require("./img/logo.png"))
+            .slogan Онлайн школа перемен для женщин
+          .menu
+            .menu-item.scrollToTeachers Преподаватели проекта
+            //.menu-item Полезные материалы
+            .menu-item.scrollToFaq Частые вопросы
+            .menu-item.last.scrollToFooter Контакты
+            .pk-button.scrollToPay Я готова меняться!
+      // =============== MAIN ===============
+      .main
+        .container
