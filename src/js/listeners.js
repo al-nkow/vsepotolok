@@ -12,11 +12,6 @@ const Listeners = () => {
   $('.scrollToCalc').on('click', () => scrollToElement('#calculator', 1000));
   $('.totop').on('click', () => scrollToElement(null, 'slow'));
 
-  // $('#show-results').on('click', () => {
-  //   $('#letterModal').modal('hide');
-  //   scrollToElement('#fame', 1000);
-  // });
-
   $('.jsMobMenuItem').on('click', () => $('#mobMenu').toggleClass('visible'));
 
   $('.jintinp').on('keyup', (event) => {
@@ -46,12 +41,20 @@ const Listeners = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    }).then((resp) => resp.json())
-      .then((res) => {
+    }).then((res) => {
         console.log('RESULT: ', res);
+        const el = $('.jsSendSuccess');
+        el.removeClass('hide');
+        setTimeout(() => {
+          el.addClass('hide');
+          $('#callModal').modal('hide');
+        }, 2000);
       })
       .catch((error) => {
         console.log('SEND MAIL:', error);
+        const el = $('.jsSendError');
+        el.removeClass('hide');
+        setTimeout(() => { el.addClass('hide')}, 2000);
       });
   });
 

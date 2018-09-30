@@ -269,6 +269,8 @@ html
             button.close(type="button" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
           div.modal-body
+            .modal-success.jsSendSuccess.hide Ваша заявка успешно отправлена! Мы свяжемся с Вами в ближайшее время.
+            .modal-error.jsSendError.hide Ошибка сервера
             .form-block
               .inp-label Ваше имя
               input.jletterinp(type="text" name="name" class="form-control" placeholder="")

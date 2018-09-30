@@ -649,3 +649,19 @@
     color: #dedede;
   }
 }
+.modal-error {
+  padding: 10px;
+  font-size: 16px;
+  color: #ff3c2d;
+  &.hide {
+    display: none;
+  }
+}
+.modal-success {
+  padding: 10px;
+  font-size: 16px;
+  color: #009688;
+  &.hide {
+    display: none;
+  }
+}
