@@ -27,10 +27,13 @@ const Listeners = () => {
     event.target.value = event.target.value.replace(/[^\d ()\-+]/g, '');
   });
 
+  $('.jaddrinp').on('keyup', (event) => {
+    event.target.value = event.target.value.replace(/[^\d а-яА-Яa-zA-Z.,\-]/g, '');
+  });
+
   $('#callForm').on('submit', (event) => {
     event.preventDefault();
     const data = getFormValues('#callForm', true);
-    console.log('=== SUBMIT ===', data);
 
     if (!data.name || !data.phone) return;
 
@@ -76,7 +79,7 @@ const Listeners = () => {
       return;
     }
     const resAngles = angles >= 4 ? angles - 4 : 0;
-    const result = square * 400 + resAngles * 150 + pipes * 200 + lamps * 200 + lusters * 400;
+    const result = square * 700 + resAngles * 150 + pipes * 200 + lamps * 200 + lusters * 400;
     $('.result-price').text(`${result} руб.`);
   };
 

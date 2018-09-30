@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST))
 
 $name= trim($_POST['name']);
 $phone = trim($_POST['phone']);
+$address = trim($_POST['address']);
 
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
@@ -23,8 +24,8 @@ try {
     $mail->Host = 'smtp.yandex.ru';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
 
-    $mail->Username = 'USERNAME'; // SMTP username
-    $mail->Password = 'PASSWORD'; // SMTP password
+    $mail->Username = 'username'; // SMTP username
+    $mail->Password = 'password'; // SMTP password
 
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
@@ -36,6 +37,7 @@ try {
     //Recipients
     $mail->setFrom('vsepotolok@yandex.ru', 'VSEPOTOLOK');  // < ---- ???????
 
+    //$mail->addAddress('al.nkow@gmail.com', 'Administrator');
     $mail->addAddress('rafas@mail.ru', 'Administrator');     // Add a recipient
     $mail->addAddress('garantkamsk@mail.ru', 'Administrator');     // Add a recipient
 
@@ -43,8 +45,8 @@ try {
     $mail->isHTML(true);
     $mail->Subject = 'ВСЕПОТОЛОК.РФ: Вызов замерщика с сайта';
 
-    $mail->Body    = '<p>Пользователь: <b>'.$name.'</b></p><p>Номер телефона: <b>'.$phone.'</b></p>';
-    $mail->AltBody = 'Пользователь: '.$name.' Номер телефона: '.$phone;
+    $mail->Body    = '<p>Пользователь: <b>'.$name.'</b></p><p>Номер телефона: <b>'.$phone.'</b></p><p>Адрес: <b>'.$address.'</b></p>';
+    $mail->AltBody = 'Пользователь: '.$name.' Номер телефона: '.$phone.' Адрес: '.$address;
 
     $mail->send();
     echo 'Message has been sent';
